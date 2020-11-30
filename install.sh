@@ -8,7 +8,9 @@ if [ $exit_code == 0 ]; then
   read -r ver url <<<$output
   wget $url -O minecraft_server.jar.$ver
   ln -s minecraft_server.jar.$ver minecraft_server.jar
-  /bin/bash run.sh
+  if [ ! -f "eula.txt" ]; then
+    /bin/bash run.sh
+  fi
 else
   echo $output
 fi
