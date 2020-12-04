@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [ ! -d buildenv ]; then
+if [ ! -d "_buildenv" ]; then
   echo -e "=======\\nBuilding virtualenv\\n======="
-  /usr/bin/python3 -m venv buildenv
-  . ./buildenv/bin/activate
+  /usr/bin/python3 -m venv _buildenv
+  . ./_buildenv/bin/activate
   echo -e "=======\\nInstalling virtualenv requirements======="
   sudo /usr/bin/pip3 install -r src/requirements.txt
-  . ./buildenv/bin/deactivate
+  . ./_buildenv/bin/deactivate
 fi
 
-if [ ! $(wich pyinstaller) ]; then
+if [ ! $(which pyinstaller) ]; then
   echo -e "=======\\nInstalling pyinstaller\\n======="
   sudo /usr/bin/pip3 install pyinstaller
 fi
