@@ -3,3 +3,4 @@ venv*
 *.spec
 .idea*
 *__pycache__
+get_download_url
