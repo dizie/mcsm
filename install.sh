@@ -1,7 +1,6 @@
 #!/bin/bash
 
-. ./venv/bin/activate
-output=$(python get_download_url.py)
+output=$(./get_download_url)
 exit_code=$?
 
 if [ $exit_code == 0 ]; then
