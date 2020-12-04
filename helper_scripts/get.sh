@@ -16,6 +16,6 @@ wget https://dizie.io/mcsm/builds/mcsm-$os_ver.tar.gz
 
 echo -e "=======\\nExtracting MCSM resouces\\n======="
 
-tar xzvf mcsm.tar.gz
+tar xzvf mcsm-$os_ver.tar.gz
 
 cd mcsm
