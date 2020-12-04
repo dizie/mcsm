@@ -19,6 +19,10 @@ work_path=$(pwd)
 
 cd ../
 
+if [ ! -d $work_path/dist ]; then
+  mkdir $work_path/dist
+fi
+
 sudo tar --exclude=".git*" --exclude="helper_scripts" --exclude="dist" --exclude=".idea" -czvf /tmp/mcsm-$rel_distro.tar.gz mcsm
 
 cp /tmp/mcsm-$rel_distro.tar.gz $work_path/dist/.
