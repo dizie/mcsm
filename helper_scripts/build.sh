@@ -7,4 +7,8 @@ if [ ! -d buildenv ]; then
   . ./buildenv/bin/deactivate
 fi
 
+if [ ! $(wich pyinstaller) ]; then
+  sudo /usr/bin/pip3 install pyinstaller
+fi
+
 pyinstaller --paths buildenv/lib/python3.7/site-packages --onefile ./src/get_download_url.py --distpath ../ --workpath /tmp/ --noconfirm --clean
