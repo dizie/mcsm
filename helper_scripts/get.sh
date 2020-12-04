@@ -3,7 +3,7 @@ os=$(uname -s)
 
 if [ $os == "Darwin" ]; then
   os_ver="mac"
-elif [ $0s == "Linux" ]; then
+elif [ $os == "Linux" ]; then
   os_ver="linux"
 else
   echo "Unsupported OS"
