@@ -1,3 +1,4 @@
+#!/bin/bash
 
 os=$(uname -s)
 
