@@ -2,3 +2,4 @@ venv*
 *buildenv
 *.spec
 .idea*
+*__pycache__
