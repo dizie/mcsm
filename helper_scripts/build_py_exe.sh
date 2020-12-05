@@ -15,4 +15,4 @@ if [ ! $(which pyinstaller) ]; then
 fi
 
 echo -e "=======\\nBuilding Executable\\n======="
-pyinstaller --paths buildenv/lib/python3.7/site-packages --onefile ./src/get_download_url.py --distpath ../ --workpath /tmp/ --noconfirm --clean
+pyinstaller --paths _buildenv/lib/python3.7/site-packages --onefile ./src/get_download_url.py --distpath ../ --workpath /tmp/ --noconfirm --clean
